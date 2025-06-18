@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package handlers
 
 import (
@@ -29,4 +27,3 @@ func GetOpenPullRequests(c *gin.Context) {
 
 	c.JSON(http.StatusOK, prs)
 }
->>>>>>> a564174 (small customizations)
