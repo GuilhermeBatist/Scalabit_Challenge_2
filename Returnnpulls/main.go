@@ -1,11 +1,16 @@
 package main
 
+import (
+	"github.com/GuilhermeBatist/Scalabit_Challenge/Returnnpulls/handlers"
+	"github.com/gin-gonic/gin"
+)
+
 func main() {
 
 	route := gin.Default()
 
-	route.GET("/repos/:owner/:repo/pulls", handler.GetOpenPullRequests)
+	route.GET("/repos/:owner/:repo/pulls", handlers.GetOpenPullRequests)
 
-	router.run(":8080")
+	route.Run(":8080")
 
 }
