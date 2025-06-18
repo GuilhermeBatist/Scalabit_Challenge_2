@@ -1,0 +1,12 @@
+github-api/
+├── main.go
+├── handlers/
+├── services/
+├── tests/
+├── Dockerfile
+├── go.mod / go.sum
+├── k8s/
+│   └── deployment.yaml   
+└── .github/
+    └── workflows/
+        └── ci.yml

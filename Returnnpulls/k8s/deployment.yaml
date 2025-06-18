@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: github-pr-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: github-pr-api
+  template:
+    metadata:
+      labels:
+        app: github-pr-api
+    spec:
+      containers:
+        - name: github-pr-api
+          image: github-pr-api
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: github-pr-api-service
+spec:
+  type: NodePort
+  selector:
+    app: github-pr-api
+  ports:
+    - port: 8080
+      nodePort: 30008

@@ -1,0 +1,15 @@
+github-pr-api/
+├── main.go
+├── handlers/
+│   └── pr_handler.go
+├── services/
+│   └── github_service.go
+├── tests/
+│   └── pr_handler_test.go
+├── Dockerfile
+├── go.mod / go.sum
+├── k8s/
+│   └── deployment.yaml
+└── .github/
+    └── workflows/
+        └── ci.yml
