@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/GuilhermeBatist/Scalabit_Challenge/Returnnpulls/handlers"
+	"github.com/GuilhermeBatist/Scalabit_Challenge_2/Returnnpulls/handlers"
 	"github.com/gin-gonic/gin"
 )
 

@@ -1,4 +1,4 @@
-module github.com/GuilhermeBatist/Scalabit_Challenge
+module github.com/GuilhermeBatist/Scalabit_Challenge_2
 
 go 1.24.2
 

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/GuilhermeBatist/Scalabit_Challenge/CDLGitreps/services"
+	"github.com/GuilhermeBatist/Scalabit_Challenge_2/CDLGitreps/services"
 )
 
 // CreateRepoHandler handles the creation of a new repository

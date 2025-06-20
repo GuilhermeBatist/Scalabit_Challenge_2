@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/GuilhermeBatist/Scalabit_Challenge/Returnnpulls/handlers"
+	"github.com/GuilhermeBatist/Scalabit_Challenge_2/Returnnpulls/handlers"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 )

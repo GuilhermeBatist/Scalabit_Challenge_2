@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/GuilhermeBatist/Scalabit_Challenge/Returnnpulls/services"
+	"github.com/GuilhermeBatist/Scalabit_Challenge_2/Returnnpulls/services"
 	"github.com/gin-gonic/gin"
 )
 

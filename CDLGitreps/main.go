@@ -1,33 +1,23 @@
 package main
 
 import (
-	//"encoding/json"
-	//"log"
-	"net/http"
 	"fmt"
+	"net/http"
+
+	"github.com/GuilhermeBatist/Scalabit_Challenge_2/CDLGitreps/handlers"
 )
-
-
 
 func main() {
 	fmt.Println("Starting server on :8080")
 
-	mux := http.NewServeMux()
+	CreateRepoHandler := handlers.CreateRepoHandler
+	DeleteRepoHandler := handlers.DeleteRepoHandler
+	ListReposHandler := handlers.ListReposHandler
+	http.HandleFunc("/repos", CreateRepoHandler)
+	http.HandleFunc("/repos/", DeleteRepoHandler)
+	http.HandleFunc("/repos/list", ListReposHandler)
 
-	mux.HandleFunc("GET /comment", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w,"returning all comments\n")
-	})
-
-	mux.HandleFunc("GET /comment/{id}", func(w http.ResponseWriter, r *http.Request) {
-		id := r.PathValue("id")
-		fmt.Fprintf(w,"returning a single comment for comment with id: %s\n", id)
-	})
-
-	mux.HandleFunc("POST /comment", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w,"creating a new comment\n")
-	})
-
-	if err :=  http.ListenAndServe("localhost:8080", mux); err != nil {
-		fmt.Println(err.Error())
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		fmt.Println("Error starting server:", err)
 	}
 }
