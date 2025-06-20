@@ -93,20 +93,17 @@ func (gh *GitHubClient) ListRepos() ([]Repo, error) {
 	return repoList, nil
 }
 
-// CreateRepo creates a new repository
-func CreateRepo(repo Repo) error {
+var CreateRepo = func(repo Repo) error {
 	client := NewGitHubClient()
 	return client.CreateRepo(repo)
 }
 
-// DeleteRepo deletes a repository by name
-func DeleteRepo(repoName string) error {
+var DeleteRepo = func(repoName string) error {
 	client := NewGitHubClient()
 	return client.DeleteRepo(repoName)
 }
 
-// ListRepos lists all repositories for the authenticated user
-func ListRepos() ([]Repo, error) {
+var ListRepos = func() ([]Repo, error) {
 	client := NewGitHubClient()
 	return client.ListRepos()
 }
